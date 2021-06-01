@@ -18,9 +18,7 @@ namespace GoogleMaps_Testing.Steps
         [Given(@"I Accept cookies")]
         public void GivenIAcceptCookies()
         {
-            mapsPage.SwitchIframe();
             mapsPage.IntroAgreeClick();
-            mapsPage.SwitchIframeParent();
         }
         
         [Given(@"Enter ""(.*)"" in the search Box")]

@@ -7,11 +7,11 @@ namespace GoogleMaps_Testing.Pages
     {
 
         IWebElement iFrameElement => Driver.WaitGetElement(By.ClassName("widget-consent-frame"));
-        IWebElement agreeButton => Driver.WaitGetElement(By.Id("introAgreeButton"));
+        IWebElement agreeButton => Driver.WaitGetElement(By.XPath("//*[@jscontroller=\"soHxf\"]"));
         IWebElement searchInput => Driver.WaitGetElement(By.Id("searchboxinput"));
         IWebElement searchButton => Driver.WaitGetElement(By.Id("searchbox-searchbutton"));
-        IWebElement getLocationName => Driver.WaitGetElement(By.XPath("//*[@jsan=\"7.section-hero-header-title-title,7.GLOBAL__gm2-headline-5\"]"));
-        IWebElement destinationButton => Driver.WaitGetElement(By.ClassName("iRxY3GoUYUY__icon"));
+        IWebElement getLocationName => Driver.WaitGetElement(By.XPath("//*[@jsan=\"7.x3AX1-LfntMc-header-title-title,7.gm2-headline-5\"]"));
+        IWebElement destinationButton => Driver.WaitGetElement(By.XPath("//*[@data-value=\"Directions\"]"));
         IWebElement finalDestination => Driver.WaitGetElement(By.XPath("//input[@class='tactile-searchbox-input'][@placeholder='']"));
 
         public void SwitchIframe() => Driver.SwitchTo().Frame(iFrameElement);
